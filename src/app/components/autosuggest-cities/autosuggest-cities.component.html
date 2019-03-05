@@ -1,6 +1,9 @@
-
+<br/>
+<mat-card>
+  <mat-toolbar color="primary">Autosuggest Cities</mat-toolbar>
+  <br/>
   <div class="row">
-    <div>
+    <div class="col-xs-6">
       <mat-form-field style="width:100%">
         <input
           matInput
@@ -19,5 +22,24 @@
         </mat-autocomplete>
       </mat-form-field>
     </div>
+    <div *ngIf="selectedCity != null" class="cols-xs-6">
+      <div class="col-xs-6">
+        <table width="100%">
+          <tr>
+            <th>ID</th>
+            <th>Location (lat, long)</th>
+            <th>Population</th>
+            <th>Elevation (meters)</th>
+          </tr>
+          <tr>
+            <td>{{selectedCity.id}}</td>
+            <td>{{selectedCity.latitude}}, {{selectedCity.longitude}}</td>
+            <td>{{selectedCity.population}}</td>
+            <td>{{selectedCity.elevationMeters ? selectedCity.elevationMeters : 'N/A'}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
+</mat-card>
 
