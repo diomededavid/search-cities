@@ -8,8 +8,7 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {GeoDbFreeModule} from 'wft-geodb-angular-client';
 
 import {AutosuggestCitiesComponent} from './components/autosuggest-cities/autosuggest-cities.component';
-import {FindCitiesComponent} from './components/find-cities/find-cities.component';
-import {FindRegionCitiesComponent} from './components/find-region-cities/find-region-cities.component';
+
 
 import {AppComponent} from './app.component';
 import {AppMaterialModule} from './app.material.module';
@@ -26,8 +25,6 @@ import {environment} from '../environments/environment';
     AutosuggestCitiesComponent,
     CountryControlComponent,
     RegionControlComponent,
-    FindCitiesComponent,
-    FindRegionCitiesComponent
   ],
   imports: [
     // Angular
